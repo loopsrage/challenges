@@ -1,18 +1,10 @@
-import os
-import sys
 import unittest
 
 import requests
 
-sys.path.append(
-        os.path.abspath(
-            os.path.join(os.path.dirname(__file__),os.path.pardir)
-            )
-        )
+from proj_options import options
+from proj_options.base import Challenge
 
-from base import Challenge
-
-BASE_URL = 'https://copart.com/'
 
 class Challenge7(Challenge):
 
@@ -24,7 +16,7 @@ class Challenge7(Challenge):
         3. Store Values and Link
         4. Loop over array and validate links are valid
         """
-        self.driver.get(BASE_URL)
+        self.driver.get(options.BASE_URL)
         # Selector for the tab for Makes
         makes_selector = '//*[@id="tabMakes"]/div/div/ul[1]'
 

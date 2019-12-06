@@ -1,20 +1,10 @@
-import os
-import sys
 import time
 import unittest
 
 from selenium.webdriver.common.by import By
 
-sys.path.append(
-        os.path.abspath(
-            os.path.join(os.path.dirname(__file__),os.path.pardir)
-            )
-        )
-
-from base import Challenge
-import helper
-
-BASE_URL = 'https://www.copart.com/'
+from proj_options import options, helper
+from proj_options.base import Challenge
 
 # Damage Types
 DAMAGE_TYPE = {
@@ -36,7 +26,7 @@ class Challenge5(Challenge):
         3. Group like models together
         4. Print the results
         """
-        self.driver.get(BASE_URL)
+        self.driver.get(options.BASE_URL)
 
         # Perform search on page for porsche
         self.options_copy['search'] = 'porsche'

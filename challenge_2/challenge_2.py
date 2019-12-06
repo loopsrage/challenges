@@ -1,15 +1,7 @@
-import os,sys
-import sys
 import unittest
 
-sys.path.append(
-        os.path.abspath(
-            os.path.join(os.path.dirname(__file__),os.path.pardir)
-            )
-        )
-import options
-from base import Challenge
-import helper
+from proj_options import options, helper
+from proj_options.base import Challenge
 
 
 class Challenge2(Challenge):

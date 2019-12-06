@@ -1,14 +1,11 @@
-import os,sys
-import sys
+import os
 import unittest
 
-sys.path.append(
-        os.path.abspath(
-            os.path.join(os.path.dirname(__file__),os.path.pardir)
-            )
-        )
+from proj_options import options
+from proj_options.base import Challenge
 
-from base import Challenge
+LOG_PATH = os.path.join('.\\logs', 'challenge_8.log')
+BASE_URL = "{}/public/lots/search".format(options.BASE_URL)
 
 
 class Challenge8(Challenge):
@@ -22,6 +19,7 @@ class Challenge8(Challenge):
 
         5. Repeat step 1 - 4 for 10 different searches
         """
+        self.driver.get(BASE_URL)
 
 
 if __name__ == '__main__':

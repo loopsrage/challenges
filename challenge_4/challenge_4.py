@@ -1,15 +1,7 @@
-import os
-import sys
 import unittest
 
-sys.path.append(
-        os.path.abspath(
-            os.path.join(os.path.dirname(__file__),os.path.pardir)
-            )
-        )
-
-from base import Challenge
-from util import Fibo
+from proj_options.base import Challenge
+from proj_options.util import Fibo
 
 
 class Challenge4(Challenge):

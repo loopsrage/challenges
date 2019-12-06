@@ -1,17 +1,6 @@
-import os
-import sys
 import unittest
 
-sys.path.append(
-        os.path.abspath(
-            os.path.join(os.path.dirname(__file__),os.path.pardir)
-            )
-        )
-
-from base import Challenge
-
-# The base url for this challenge
-BASE_URL = 'https://google.com'
+from proj_options.base import Challenge
 
 
 class Challenge1(Challenge):
@@ -22,7 +11,7 @@ class Challenge1(Challenge):
         2. Check if 'Google' is in the title of page
         """
         # Initialize the url
-        self.driver.get(BASE_URL)
+        self.driver.get('https://www.google.com/')
         # Assert 'Google' in self.driver.title
         self.assertIn('Google', self.driver.title)
 

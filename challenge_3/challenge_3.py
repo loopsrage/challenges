@@ -1,17 +1,9 @@
-import os
-import sys
 import unittest
 
 from selenium.webdriver.common.by import By
 
-sys.path.append(
-        os.path.abspath(
-            os.path.join(os.path.dirname(__file__),os.path.pardir)
-            )
-        )
-from base import Challenge
-
-BASE_URL = 'https://copart.com/'
+from proj_options import options
+from proj_options.base import Challenge
 
 
 class Challenge3(Challenge):
@@ -24,7 +16,7 @@ class Challenge3(Challenge):
         3. Loop over links
         """
         # Get the initial page
-        self.driver.get(BASE_URL)
+        self.driver.get(options.BASE_URL)
 
         # Search for 'popularSearches'
         searches_elem = self.driver.find_elements(By.XPATH, '//*[@ng-if="popularSearches"]')

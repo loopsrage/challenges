@@ -1,20 +1,13 @@
-import time
-import sys
+import os
 import time
 import unittest
 
 from selenium.common.exceptions import NoSuchElementException
 
-sys.path.append(
-        os.path.abspath(
-            os.path.join(os.path.dirname(__file__),os.path.pardir)
-            )
-        )
-import options
-from base import Challenge
-import helper
+from proj_options import options, helper
+from proj_options.base import Challenge
 
-SCREENSHOT_PATH = os.path.join('.\\challenge_6\\screenshots', 'challenge_6.png')
+SCREENSHOT_PATH = os.path.join('.challenge_6', 'screenshots', 'challenge_6.png')
 
 
 class Challenge6(Challenge):
